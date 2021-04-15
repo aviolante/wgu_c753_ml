@@ -48,3 +48,6 @@ print("R-Squared Test:", r2_score(target_test, y_preds_test))
 print("R-Squared Train:", r2_score(target_train, y_preds_train))
 
 
+print(clf.score(feature_train, target_train))
+print(clf.score(feature_test, target_test))
+

@@ -8,14 +8,14 @@ from lib.feature_format import feature_format, target_feature_split
 data = [115, 140, 175]
 
 
-def feature_scaler(input_list):
+def feature_scaler(data):
 
-    min_val = np.min(input_list)
-    max_val = np.max(input_list)
+    min_val = np.min(data)
+    max_val = np.max(data)
 
     scaled_values = []
 
-    for i in input_list:
+    for i in data:
         x_prime = (i - min_val)/(max_val - min_val)
 
         scaled_values.append(x_prime)
@@ -23,12 +23,12 @@ def feature_scaler(input_list):
     return scaled_values
 
 
-scaled_values = feature_scaler(data)
+new_values = feature_scaler(data)
 # [0.0, 0.4166666666666667, 1.0]
 
 # sklearn implementation
 # make numpy array and reshape since single feature
-data = np.array(data).reshape(-1,1)
+data = np.array(data).reshape(-1, 1)
 
 scaler = MinMaxScaler()
 scaler.fit_transform(data)
