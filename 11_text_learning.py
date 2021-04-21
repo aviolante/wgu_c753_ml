@@ -1,6 +1,5 @@
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
 from nltk.stem import SnowballStemmer
 from lib.parse_out_email_text import parse_out_text
 
@@ -31,7 +30,5 @@ print(text)
 # Please proceed to the next part of the project!
 
 # tokenized and stemmed
-# ['hi', 'everyon', '!', 'if', 'you', 'can', 'read', 'this', 'messag', ',', 'you', 're', 'proper', 'use',
-# 'parseouttext', '.', 'pleas', 'proceed', 'to', 'the', 'next', 'part', 'of', 'the', 'project', '!']
-
-
+# ['hi', 'everyon', 'if', 'you', 'can', 'read', 'this', 'messag', 'your', 'proper', 'use', 'parseouttext', 'pleas',
+#  'proceed', 'to', 'the', 'next', 'part', 'of', 'the', 'project']
